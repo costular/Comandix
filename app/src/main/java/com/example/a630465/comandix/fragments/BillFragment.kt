@@ -8,9 +8,9 @@ import com.example.commons.BaseListFragment
 import com.example.commons.DataBindingRecyclerAdapter
 
 
-class BillFragment : BaseListFragment() {
+class BillFragment {
 
-    override fun setupList(list: RecyclerView) {
+    /*override fun setupList(list: RecyclerView) {
         super.setupList(list)
     }
 
@@ -33,5 +33,6 @@ class BillFragment : BaseListFragment() {
                                     "https://ep01.epimg.net/elcomidista/imagenes/2017/03/28/receta/1490731468_626097_1490731646_media_normal.jpg",
                                     12.50f))
     }
+    */
 
 }

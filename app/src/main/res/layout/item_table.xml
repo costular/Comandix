@@ -17,13 +17,16 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:cardBackgroundColor="@color/colorPrimary">
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:onClick="@{() -> presenter.showOrderForTable(table)}"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp"
-            android:onClick="@{() -> presenter.showOrderForTable(table)}">
+            android:padding="8dp">
 
             <ImageView
                 android:id="@+id/imgTable"

@@ -3,6 +3,8 @@ package com.example.a630465.comandix.fragments
 import android.support.v7.widget.RecyclerView
 import com.example.a630465.comandix.BR
 import com.example.a630465.comandix.R
+import com.example.a630465.comandix.adapters.DishAdapter
+import com.example.a630465.comandix.utils.Handlers
 import com.example.domain.model.*
 import com.example.commons.BaseListFragment
 import com.example.commons.DataBindingRecyclerAdapter
@@ -11,7 +13,7 @@ import com.example.commons.DataBindingRecyclerAdapter
 class DishesFragment : BaseListFragment() {
 
     override fun getAdapter(): RecyclerView.Adapter<*> {
-        val dishAdapter = DataBindingRecyclerAdapter<Dish>(BR.dish, R.layout.item_dish)
+        val dishAdapter = DishAdapter(Handlers())
         dishAdapter.items.addAll(getDishes())
         dishAdapter.notifyDataSetChanged()
         return dishAdapter

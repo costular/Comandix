@@ -3,6 +3,8 @@ package com.example.a630465.comandix.fragments
 import android.support.v7.widget.RecyclerView
 import com.example.a630465.comandix.BR
 import com.example.a630465.comandix.R
+import com.example.a630465.comandix.adapters.TableAdapter
+import com.example.a630465.comandix.utils.Handlers
 import com.example.domain.model.*
 import com.example.commons.BaseListFragment
 import com.example.commons.DataBindingRecyclerAdapter
@@ -15,7 +17,7 @@ class TableFragment : BaseListFragment() {
     }
 
     override fun getAdapter(): RecyclerView.Adapter<*> {
-        val tablesAdapter = DataBindingRecyclerAdapter<Table>(BR.table, R.layout.item_table)
+        val tablesAdapter = TableAdapter(Handlers())
         tablesAdapter.updateItems(getTables())
 
         return tablesAdapter
