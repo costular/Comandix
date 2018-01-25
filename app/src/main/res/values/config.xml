@@ -1,0 +1,3 @@
+<resources>
+    <string name="BASE_URL">https://marmoti-restaurant.herokuapp.com/api/</string>
+</resources>
